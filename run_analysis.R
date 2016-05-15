@@ -89,5 +89,5 @@ print("Please find the labelled datasets at : ~/Desktop/Project_Merge/UCI HAR Da
 #   the average of each variable for each activity and each subject.
 Avr_Var<-aggregate(. ~Subject+Activity,Compl4, mean)
 Avr_Var<-Avr_Var[order(Avr_Var$Subject, Avr_Var$Activity),]
-write.table(Avr_Var, file = "TidyDataSet.csv", row.names = FALSE)
-print("Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.csv")
+write.table(Avr_Var, file = "TidyDataSet.txt", row.names = FALSE)
+print("Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.txt")
