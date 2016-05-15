@@ -154,7 +154,7 @@ if(!file.exists (&quot;Project_Merge&quot;)){dir.create(&quot;Project_Merge&quot
 #download.file(fileUrl, destfile= &quot;Data.zip&quot;, method = &quot;curl&quot;)
 DateDownloaded&lt;-date()
 DateDownloaded</code></pre>
-<pre><code>## [1] &quot;Sun May 15 00:57:53 2016&quot;</code></pre>
+<pre><code>## [1] &quot;Sun May 15 01:03:47 2016&quot;</code></pre>
 <pre class="r"><code>unzip(&quot;Data.zip&quot;,  exdir = &quot;./&quot;)</code></pre>
 <pre><code>## Warning in unzip(&quot;Data.zip&quot;, exdir = &quot;./&quot;): error 1 in extracting from zip
 ## file</code></pre>
@@ -237,9 +237,9 @@ print(&quot;Please find the labelled datasets at : ~/Desktop/Project_Merge/UCI H
 <h1>the average of each variable for each activity and each subject.</h1>
 <pre class="r"><code>Avr_Var&lt;-aggregate(. ~Subject+Activity,Compl4, mean)
 Avr_Var&lt;-Avr_Var[order(Avr_Var$Subject, Avr_Var$Activity),]
-write.table(Avr_Var, file = &quot;TidyDataSet.csv&quot;, row.names = FALSE)
-print(&quot;Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.csv&quot;)</code></pre>
-<pre><code>## [1] &quot;Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.csv&quot;</code></pre>
+write.table(Avr_Var, file = &quot;TidyDataSet.txt&quot;, row.names = FALSE)
+print(&quot;Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.txt&quot;)</code></pre>
+<pre><code>## [1] &quot;Please find the tidy dataset at : ~/Desktop/Project_Merge/UCI HAR Dataset/TidyDataSet.txt&quot;</code></pre>
 </div>
 
 
